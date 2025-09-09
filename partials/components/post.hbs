@@ -8,6 +8,12 @@
               {{date format="MMMM DD, YYYY"}}
             </time>
           </li>
+          <li class="md-meta__item">
+            in
+            {{#primary_tag}}
+              <a href="{{url}}" class="md-meta__link">{{name}}</a>
+            {{/primary_tag}}
+          </li>
         </ul>
       </div>
     </header>
