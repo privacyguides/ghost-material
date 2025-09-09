@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="{{@site.locale}}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "stylesheets/main.8cce3a28.min.css"}}">
+    <link rel="stylesheet" href="{{asset "stylesheets/palette.ab4e12ef.min.css"}}">
+    <link rel="stylesheet" href="{{asset "stylesheets/fonts.css"}}">
+    <link rel="stylesheet" href="{{asset "stylesheets/extra.css"}}">
+
+    {{ghost_head}}
+
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+  </head>
+
+  <body class="{{body_class}}" dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+
+    <header class="md-header" data-md-component="header">
+      <nav class="md-header__inner md-grid">
+        <a href="{{@site.url}}" class="md-header__button md-logo" data-md-component="logo">
+          <img src="{{@site.logo}}" alt="{{@site.title}}">
+        </a>
+        <label class="md-header__button md-icon" for="__drawer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        </label>
+        <div class="md-header__title" data-md-component="header-title">
+          <div class="md-header__ellipsis">
+            <div class="md-header__topic">
+              <span class="md-ellipsis">
+                {{@site.title}}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      </nav>
+    </header>
+
+    <div class="md-container" data-md-component="container">
+      <nav class="md-tabs" data-md-component="tabs">
+        <div class="md-grid">
+          {{navigation}}
+        </div>
+      </nav>
+
+      <main class="md-main" data-md-component="main">
+      {{{body}}}
+      </main>
+
+    </div>
+
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+    <script id="__config" type="application/json">{
+      "annotate": null,
+      "base": "..",
+      "features": [
+        "announce.dismiss",
+        "navigation.tabs",
+        "content.tabs.link",
+        "content.tooltips"
+      ],
+      "search": null,
+      "tags": null,
+      "translations": {
+        "clipboard.copied": "Copied to clipboard",
+        "clipboard.copy": "Copy to clipboard",
+        "search.result.more.one": "1 more on this page",
+        "search.result.more.other": "# more on this page",
+        "search.result.none": "No matching documents",
+        "search.result.one": "1 matching document",
+        "search.result.other": "# matching documents",
+        "search.result.placeholder": "Type to start searching",
+        "search.result.term.missing": "Missing",
+        "select.version": "Select version"
+      },
+      "version": null
+    }</script>
+    <script src="{{asset "javascripts/bundle.eb438620.min.js"}}"></script>
+
+    {{ghost_foot}}
+  </body>
+</html>

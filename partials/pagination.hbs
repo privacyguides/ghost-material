@@ -1,0 +1,9 @@
+<nav class="md-pagination" role="navigation">
+  {{#if prev}}
+    <a class="md-pagination__link" href="{{page_url prev}}">←</a>
+  {{/if}}
+  <span>Page {{page}} of {{pages}}</span>
+  {{#if next}}
+    <a class="md-pagination__link" href="{{page_url next}}">→</a>
+  {{/if}}
+</nav>

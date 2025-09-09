@@ -1,0 +1,24 @@
+{{#if isSecondary}}
+<nav class="md-nav md-nav--primary" data-md-level="0">
+  <ul class="md-nav__list">
+    {{#foreach navigation}}
+    <li class="nav-{{slug}} md-nav__item{{#if current}} md-nav__item--active{{/if}}">
+      <a href="{{url absolute="true"}}" class="md-nav__link">
+        {{label}}
+      </a>
+    </li>
+    {{/foreach}}
+  </ul>
+</nav>
+{{else}}
+<ul class="nav md-tabs__list">
+  <!-- Loop through the navigation items -->
+  {{#foreach navigation}}
+  <li class="nav-{{slug}} md-tabs__item{{#if current}} md-tabs__item--active{{/if}}">
+    <a href="{{url absolute="true"}}" class="md-tabs__link">
+      {{label}}
+    </a>
+  </li>
+  {{/foreach}}
+</ul>
+{{/if}}

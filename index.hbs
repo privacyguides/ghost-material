@@ -1,0 +1,31 @@
+{{!< default}}
+
+<div class="md-main__inner md-grid">
+  {{> "components/nav-sidebar"}}
+
+  <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+    <div class="md-sidebar__scrollwrap">
+      <div class="md-sidebar__inner">
+        TEST 2 TODO
+      </div>
+    </div>
+  </div>
+
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 class="gh-pagehead-title">Latest</h1>
+      </header>
+
+      {{#foreach posts}}
+          {{> "components/post"}}
+      {{/foreach}}
+
+      {{pagination}}
+
+    </div>
+  </div>
+  
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+  <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
