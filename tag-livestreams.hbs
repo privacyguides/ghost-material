@@ -1,0 +1,101 @@
+{{!< default}}
+
+{{#contentFor "extraHead"}}
+  <link rel="stylesheet" href="{{asset "stylesheets/spotlight.css"}}">
+{{/contentFor}}
+
+{{#contentFor "beforeContent"}}
+  {{^is "paged"}}
+    <section class="mdx-container">
+      <section class="mdx-parallax__group mdx-video-spotlight">
+        <div class="md-content md-grid" data-md-component="content">
+          <div class="md-content__inner">
+            <div class="mdx-spotlight">
+              <figure class="mdx-spotlight__feature">
+                <a href="{{url}}" tabindex="-1">
+                  <img
+                    src="{{asset "images/twip_square_thumbnail.jpg"}}"
+                    alt="This Week in Privacy podcast cover art"
+                  >
+                </a>
+                <figcaption>
+                  <div class="md-typeset">
+                    <h1>This Week in Privacy</h1>
+                    <p>
+                      We're live on YouTube weekly at 4 PM Central to talk about privacy news from around the industry,
+                      updates from our own team, and anything else you want to discuss.
+                    </p>
+                    <p>
+                      Our forum is <a href="https://discuss.privacyguides.net/c/announcements/livestreams/9414"open to questions</a>
+                      starting every Wednesday if you want something addressed during next week's Q and A.
+                      Plus, you can always catch the recordings on PeerTube and episode sources below!
+                    </p>
+                  </div>
+                  <div class="md-post__meta md-meta">
+                    <ul class="md-meta__list">
+                      <li class="md-meta__item">Fridays,
+                        <time datetime="16:00-05:00">
+                          21:00 UTC
+                        </time>
+                      </li>
+                      <li class="md-meta__item">
+                        <a href="https://www.youtube.com/playlist?list=PL1m__5QdVZYwrrfLgBBAypcKMBlJtXUSP" class="md-meta__link">Tune in live →</a>
+                      </li>
+                    </ul>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  {{/is}}
+{{/contentFor}}
+
+<div class="md-main__inner md-grid">
+  {{> "components/nav-sidebar"}}
+
+  <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+    <div class="md-sidebar__scrollwrap">
+      <div class="md-sidebar__inner">
+        <nav class="md-nav md-nav--secondary">
+          <label class="md-nav__title" for="__toc">
+            <span class="md-nav__icon md-icon"></span>
+            Table of contents
+          </label>
+          <ul class="md-nav__list" data-md-component="toc">
+            {{#foreach posts}}
+            <li class="md-nav__item">
+              <a href="{{url}}" class="md-nav__link">
+                <span class="md-ellipsis">
+                  {{title}}
+                </span>
+              </a>
+            </li>
+            {{/foreach}}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      {{#tag}}
+      <header class="md-typeset">
+        <h1 class="gh-pagehead-title">{{name}} from Privacy Guides</h1>
+        <p>{{description}}</p>
+      </header>
+      {{/tag}}
+
+      {{#foreach posts}}
+        {{> "components/post" action="Watch now →"}}
+      {{/foreach}}
+
+      {{pagination}}
+
+    </div>
+  </div>
+  
+</div>
