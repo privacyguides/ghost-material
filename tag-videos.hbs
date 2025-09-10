@@ -25,16 +25,25 @@
                     alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
                   >
                 </a>
-                <figcaption class="md-typeset">
-                  <h1><a href="{{url}}">{{title}}</a></h1>
-                  <p>
-                    {{excerpt}}
-                  </p>
-                  <p>
-                    <a href="{{url}}">
-                      Watch now →
-                    </a>
-                  </p>
+                <figcaption>
+                  <div class="md-typeset">
+                    <h1><a href="{{url}}">{{title}}</a></h1>
+                    <p>
+                      {{excerpt}}
+                    </p>
+                  </div>
+                  <div class="md-post__meta md-meta">
+                    <ul class="md-meta__list">
+                      <li class="md-meta__item">
+                        <time datetime="{{date format="YYYY-MM-DD"}}">
+                          {{date format="MMMM DD, YYYY"}}
+                        </time>
+                      </li>
+                      <li class="md-meta__item">
+                        <a href="{{url}}" class="md-meta__link">Watch the latest →</a>
+                      </li>
+                    </ul>
+                  </div>
                 </figcaption>
               </figure>
             {{/foreach}}
@@ -77,13 +86,13 @@
     <div class="md-content__inner">
       {{#tag}}
       <header class="md-typeset">
-        <h1 class="gh-pagehead-title">Latest in {{name}}</h1>
+        <h1 class="gh-pagehead-title">Latest {{name}}</h1>
         <p>{{description}}</p>
       </header>
       {{/tag}}
 
-      {{#foreach posts}}
-          {{> "components/post"}}
+      {{#foreach posts from="2"}}
+          {{> "components/post" action="Watch now →"}}
       {{/foreach}}
 
       {{pagination}}
