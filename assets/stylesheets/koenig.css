@@ -1,0 +1,13 @@
+.md-typeset figure.kg-card {
+  text-align: left;
+  width: auto;
+  display: block;
+  margin: revert;
+}
+
+.md-typeset .kg-width-wide, .md-typeset .kg-width-full {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
