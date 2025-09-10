@@ -1,0 +1,121 @@
+{{!< default}}
+
+{{#post}}
+<div class="md-main__inner md-grid">
+  <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+    <div class="md-sidebar__scrollwrap">
+      <div class="md-sidebar__inner md-post">
+        <nav class="md-nav md-nav--primary">
+          <!-- Back to overview link -->
+          {{#primary_tag}}
+          <div class="md-post__back">
+            <div class="md-nav__title md-nav__container">
+              <a href="{{url}}" class=" md-nav__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                <span class="md-ellipsis">
+                  Back to index
+                </span>
+              </a>
+            </div>
+          </div>
+          {{/primary_tag}}
+
+          <!-- Post authors -->
+          <div class="md-post__authors md-typeset">
+            {{#foreach authors}}
+              <div class="md-profile md-post__profile">
+                <span class="md-author md-author--long">
+                  <img src="{{profile_image}}" alt="{{name}}" />
+                </span>
+                <span class="md-profile__description">
+                  <strong>
+                    <a href="{{url}}"><span>{{name}}</span></a>
+                  </strong>
+                  <br />
+                </span>
+              </div>
+            {{/foreach}}
+          </div>
+
+          <!-- Post metadata -->
+          <ul class="md-post__meta md-nav__list">
+            <li class="md-nav__item md-nav__item--section">
+              <div class="md-post__title">
+                <span class="md-ellipsis">
+                  Metadata
+                </span>
+              </div>
+              <nav class="md-nav">
+                <ul class="md-nav__list">
+
+                  <!-- Post date -->
+                  <li class="md-nav__item">
+                    <div class="md-nav__link" title="Date published">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                      <time
+                        datetime="{{date format="YYYY-MM-DDTHH:mm:ssZ"}}"
+                        class="md-ellipsis"
+                      >
+                        {{date format="MMMM DD, YYYY"}}
+                      </time>
+                    </div>
+                  </li>
+
+                  <li class="md-nav__item">
+                    <div class="md-nav__link">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                      <span class="md-ellipsis">
+                        in
+                        {{#primary_tag}}
+                          <a href="{{url}}">{{name}}</a>
+                        {{/primary_tag}}
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-content" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <header class="md-post__header">
+        {{#has tag="count:>1"}}
+          <nav class="md-tags">
+            {{#foreach tags}}
+              {{#unless @first}}
+                <a href="{{url}}" class="md-tag">{{name}}</a>
+              {{/unless}}
+            {{/foreach}}
+          </nav>
+        {{/has}}
+        <h1 class="md-post__title">{{title}}</h1>
+        {{#if feature_image}}
+          <figure class="gh-card-image">
+            <img
+              srcset="{{img_url feature_image size="s"}} 300w,
+                      {{img_url feature_image size="m"}} 720w,
+                      {{img_url feature_image size="l"}} 960w,
+                      {{img_url feature_image size="xl"}} 1200w,
+                      {{img_url feature_image size="xxl"}} 2000w"
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              src="{{img_url feature_image size="m"}}"
+              alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+            >
+          </figure>
+        {{/if}}
+      </header>
+      <section class="md-post__content gh-content gh-canvas">
+        {{content}}
+      </section>
+    </article>
+  </div>
+  
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+  <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+{{/post}}
