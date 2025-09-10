@@ -1,0 +1,147 @@
+/*
+/// Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
+/// Copyright (c) 2025 Jonah Aragon <jonah@triplebit.net>
+///
+/// Permission is hereby granted, free of charge, to any person obtaining a
+/// copy of this software and associated documentation files (the "Software"),
+/// to deal in the Software without restriction, including without limitation
+/// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+/// and/or sell copies of the Software, and to permit persons to whom the
+/// Software is furnished to do so, subject to the following conditions:
+///
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+///
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+/// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+/// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+/// DEALINGS
+*/
+
+.mdx-container {
+    background: #ffdd98;
+    background-size: contain;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+[data-md-color-scheme="slate"] .mdx-container, [data-md-color-scheme="slate"] .mdx-parallax__group.mdx-why-care {
+    background: rgba(9, 9, 9, 0.95);
+}
+
+.mdx-hero {
+    margin: 0 0.8rem;
+}
+.mdx-hero h1 {
+    color: currentcolor;
+    margin-bottom: 1rem;
+    font-size: 2.6rem;
+}
+@media screen and (max-width: 29.9375em) {
+    .mdx-hero h1 {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 60em) {
+    .mdx-hero {
+        align-items: stretch;
+        display: flex;
+    }
+    .mdx-hero__content {
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+        max-width: 45rem;
+    }
+    .mdx-hero__image {
+        order: 1;
+        transform: translateX(4rem);
+        width: 38rem;
+    }
+}
+@media screen and (min-width: 76.25em) {
+    .mdx-hero__image {
+        transform: translateX(8rem);
+    }
+}
+.mdx-hero .md-button {
+    color: var(--pg-hero-color);
+    border-color: var(--pg-hero-color);
+}
+[data-md-color-scheme="slate"] .mdx-hero .md-button--primary {
+    color: var(--md-primary-fg-color);
+}
+.mdx-hero .md-button--primary {
+    color: var(--md-primary-fg-color);
+    background-color: var(--md-typeset-color);
+    border-color: transparent;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+nav[class="md-tabs"] {
+    border-bottom: none;
+}
+.mdx-spotlight{
+    margin:2em 0
+}
+.mdx-spotlight__feature{
+    display:flex;
+    flex:1 0 48%;
+    flex-flow:row nowrap;
+    gap:3.2rem;
+    margin:0 0 3.2rem
+}
+@media screen and (max-width:59.984375em){
+    .mdx-spotlight__feature{
+        flex-direction:column;
+        gap:0
+    }
+}
+@media screen and (min-width:60em){
+    .mdx-spotlight__feature:nth-child(odd){
+        flex-direction:row-reverse
+    }
+}
+.mdx-spotlight__feature:last-child{
+    margin-bottom:1em
+}
+.mdx-spotlight__feature>a{
+    display:block;
+    flex-shrink:0;
+    transition:transform .5s cubic-bezier(.075,.85,.175,1)
+}
+@media screen and (max-width:59.984375em){
+    .mdx-spotlight__feature>a{
+        margin-left:auto;
+        margin-right:auto
+    }
+}
+.mdx-spotlight__feature>a:hover{
+    transform:scale(1.025)
+}
+.mdx-spotlight__feature a>img{
+    border-radius:.2rem;
+    box-shadow:var(--md-shadow-z2);
+    display:block;
+    height:auto;
+    max-width:100%;
+    width:25rem
+}
+.mdx-spotlight__feature a>img,.mdx-spotlight__feature figcaption{
+    transition:transform .75s cubic-bezier(.075,.85,.175,1) 125ms,opacity .75s 125ms
+}
+.mdx-spotlight__feature figcaption{
+    margin-top:.8rem
+}
+.js .mdx-spotlight__feature[hidden]>a>img{
+    opacity:0;
+    transform:translateY(1.6rem)
+}
+.js .mdx-spotlight__feature[hidden]>figcaption{
+    opacity:0;
+    transform:translateX(1.6rem)
+}
+.js .mdx-spotlight__feature[hidden]:nth-child(2n)>figcaption{
+    transform:translateX(-1.6rem)
+}
