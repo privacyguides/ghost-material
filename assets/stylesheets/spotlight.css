@@ -85,6 +85,9 @@ nav[class="md-tabs"] {
 .mdx-spotlight{
     margin:2em 0
 }
+.mdx-spotlight__feature .md-typeset a {
+    color: var(--pg-hero-color);
+}
 .mdx-spotlight__feature{
     display:flex;
     flex:1 0 48%;
