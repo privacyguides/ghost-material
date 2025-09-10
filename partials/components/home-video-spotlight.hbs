@@ -1,10 +1,6 @@
 <section class="mdx-parallax__group">
   <div class="md-content md-grid" data-md-component="content">
     <div class="md-content__inner">
-      <header class="md-typeset">
-        <h2 class="gh-pagehead-title">The Latest Videos on the Channel 
-        </h2>
-      </header>
       <div class="mdx-spotlight">
         {{#get "tags" filter="slug:videos"}}
           {{#foreach tags}}
@@ -24,7 +20,7 @@
                     >
                   </a>
                   <figcaption class="md-typeset">
-                    <h3>{{title}}</h3>
+                    <h2>{{title}}</h2>
                     <p>
                       {{excerpt}}
                     </p>
