@@ -27,7 +27,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-[data-md-color-scheme="slate"] .mdx-container {
+[data-md-color-scheme="slate"] .mdx-container, [data-md-color-scheme="slate"] .mdx-parallax__group.mdx-video-spotlight {
     background: rgba(9, 9, 9, 0.95);
 }
 
