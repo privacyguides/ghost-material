@@ -1,3 +1,7 @@
+#ghost-portal-root {
+  color-scheme: light;
+}
+
 .md-typeset figure.gh-card-image, .gh-card-image img {
   width: 100%;
 }
