@@ -11,3 +11,11 @@
   margin-left: 0;
   margin-right: 0;
 }
+
+.md-typeset .kg-bookmark-metadata {
+  width: auto;
+}
+
+.md-typeset .kg-bookmark-metadata .kg-bookmark-icon {
+  margin-right: 6px;
+}

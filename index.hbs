@@ -6,7 +6,23 @@
   <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
     <div class="md-sidebar__scrollwrap">
       <div class="md-sidebar__inner">
-        TEST 2 TODO
+        <nav class="md-nav md-nav--secondary">
+          <label class="md-nav__title" for="__toc">
+            <span class="md-nav__icon md-icon"></span>
+            Table of contents
+          </label>
+          <ul class="md-nav__list" data-md-component="toc">
+            {{#foreach posts}}
+            <li class="md-nav__item">
+              <a href="{{url}}" class="md-nav__link">
+                <span class="md-ellipsis">
+                  {{title}}
+                </span>
+              </a>
+            </li>
+            {{/foreach}}
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
