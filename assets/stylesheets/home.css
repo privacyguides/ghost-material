@@ -50,7 +50,7 @@
         display: flex;
     }
     .mdx-hero__content {
-        margin-top: 6rem;
+        margin-top: 3rem;
         margin-bottom: 3rem;
         max-width: 45rem;
     }
@@ -126,13 +126,6 @@ nav[class="md-tabs"] {
 }
 .js .md-content header[hidden]{
     opacity:0
-}
-.md-header:not(.md-header--shadow){
-    background-color:initial;
-    transition:background-color 125ms,transform 125ms cubic-bezier(.1,.7,.1,1),box-shadow 0ms
-}
-.md-header--shadow{
-    transition:background-color .25s,transform .25s cubic-bezier(.1,.7,.1,1),box-shadow .25s
 }
 :root{
     --md-parallax-perspective:2.5rem
@@ -423,11 +416,6 @@ nav[class="md-tabs"] {
     .md-sidebar--primary{
         display:none
     }
-}
-[data-md-color-primary] .md-tabs{
-    background-color:initial;
-    position:absolute;
-    top:2.4rem
 }
 
 .md-button.mdx-donate-button {
