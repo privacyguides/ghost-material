@@ -112,9 +112,12 @@
         <section class="md-post__content gh-content gh-canvas">
           {{content}}
         </section>
-        <section class="md-post__content gh-comments">
-          {{comments}}
-        </section>
+        {{#if comments}}
+          <section class="md-post__comments gh-comments">
+            <h2>Subscriber Discussion</h2>
+            {{comments title=""}}
+          </section>
+        {{/if}}
       </article>
     </div>
   {{/post}}

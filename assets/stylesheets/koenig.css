@@ -2,10 +2,16 @@
   color-scheme: light;
 }
 
+/* Generic Block Elements */
+.md-typeset div.kg-card {
+  margin: 1.6em 0;
+}
+
 .md-typeset figure.gh-card-image, .gh-card-image img {
   width: 100%;
 }
 
+/* Embedded Content */
 .md-typeset figure.kg-card {
   text-align: left;
   width: auto;
