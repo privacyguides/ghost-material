@@ -603,19 +603,19 @@ path[d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-
   margin-top: 0;
 }
 
-body div .pg-hide-mobile {
-  display: none;
+.pg-hide-mobile {
+  display: none!important;
 }
 @media (min-width: 76.25em) {
-  body div .pg-hide-mobile {
-    display: block;
+  .pg-hide-mobile {
+    display: block!important;
   }
 }
-body div .pg-hide-desktop {
-  display: block;
+.pg-hide-desktop {
+  display: block!important;
 }
 @media (min-width: 76.25em) {
-  body div .pg-hide-desktop {
-    display: none;
+  .pg-hide-desktop {
+    display: none!important;
   }
 }
