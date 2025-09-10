@@ -79,6 +79,16 @@
     margin-right: 0.5rem;
     margin-top: 0.5rem;
 }
+.md-typeset .mdx-hero ul.mdx-hero__buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+}
+.md-typeset .mdx-hero ul.mdx-hero__buttons li {
+    margin: 0;
+}
+
 nav[class="md-tabs"] {
     border-bottom: none;
 }
