@@ -421,3 +421,9 @@ nav[class="md-tabs"] {
     position:absolute;
     top:2.4rem
 }
+
+.md-button.mdx-donate-button {
+    background-color: var(--pg-red);
+    color: var(--md-primary-fg-color);
+    border-color: transparent;
+}
