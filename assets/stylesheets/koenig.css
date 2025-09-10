@@ -5,6 +5,11 @@
   margin: revert;
 }
 
+.md-typeset .kg-card.kg-embed-card {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .md-typeset .kg-width-wide, .md-typeset .kg-width-full {
   width: 100%;
   max-width: 100%;
