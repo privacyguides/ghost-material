@@ -54,20 +54,6 @@
         margin-bottom: 3rem;
         max-width: 45rem;
     }
-    .mdx-hero__image {
-        order: 1;
-        transform: translateX(4rem);
-        width: 38rem;
-    }
-}
-@media screen and (min-width: 76.25em) {
-    .mdx-hero__image {
-        transform: translateX(8rem);
-    }
-}
-.mdx-hero .md-button {
-    color: var(--pg-hero-color);
-    border-color: var(--pg-hero-color);
 }
 [data-md-color-scheme="slate"] .mdx-hero .md-button--primary {
     color: var(--md-primary-fg-color);
@@ -93,9 +79,6 @@ nav[class="md-tabs"] {
     border-bottom: none;
 }
 
-.md-typeset{
-    color:var(--md-typeset-color)
-}
 .md-typeset h2{
     font-weight:700;
     margin-top:.175em

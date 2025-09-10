@@ -38,11 +38,13 @@
     </div>
   </div>
 </section>
+<section class="pg-home-content">
+  {{> "components/home-video-spotlight"}}
+  {{> "components/home-why-care"}}
+  {{> "components/home-connect"}}
+</section>
 {{/contentFor}}
 
-{{> "components/nav-sidebar"}}
-
-{{> "components/home-video-spotlight"}}
-{{> "components/home-why-care"}}
-{{> "components/home-connect"}}
-  
+<div class="md-main__inner md-grid">
+  {{> "components/nav-sidebar"}}
+</div>
