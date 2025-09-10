@@ -602,3 +602,20 @@ path[d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-
 .md-typeset .gh-card-title {
   margin-top: 0;
 }
+
+body div .pg-hide-mobile {
+  display: none;
+}
+@media (min-width: 76.25em) {
+  body div .pg-hide-mobile {
+    display: block;
+  }
+}
+body div .pg-hide-desktop {
+  display: block;
+}
+@media (min-width: 76.25em) {
+  body div .pg-hide-desktop {
+    display: none;
+  }
+}
