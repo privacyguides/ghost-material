@@ -1,0 +1,20 @@
+<div class="md-header__topic" data-md-component="header-topic">
+  <span class="md-ellipsis">
+    {{#is "post, page, tag"}}
+      {{#is "post"}}
+        {{#post}}{{title}}{{/post}}
+      {{/is}}
+      {{#is "page"}}
+        {{#page}}{{title}}{{/page}}
+      {{/is}}
+      {{#is "tag"}}
+        {{#tag}}{{name}}{{/tag}}
+      {{/is}}
+      {{#is author}}
+        {{#author}}{{name}}{{/author}}
+      {{/is}}
+    {{else}}
+      {{@site.title}}
+    {{/is}}
+  </span>
+</div>
