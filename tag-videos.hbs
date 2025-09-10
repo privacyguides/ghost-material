@@ -5,52 +5,21 @@
 {{/contentFor}}
 
 {{#contentFor "beforeContent"}}
-<section class="mdx-container">
-  <section class="mdx-parallax__group mdx-video-spotlight">
-    <div class="md-content md-grid" data-md-component="content">
-      <div class="md-content__inner">
-        <div class="mdx-spotlight">
-          {{#foreach posts limit="1"}}
-            <figure class="mdx-spotlight__feature">
-              <a href="{{url}}" tabindex="-1">
-                <img
-                  srcset="{{img_url feature_image size="s"}} 300w,
-                          {{img_url feature_image size="m"}} 720w,
-                          {{img_url feature_image size="l"}} 960w,
-                          {{img_url feature_image size="xl"}} 1200w,
-                          {{img_url feature_image size="xxl"}} 2000w"
-                  sizes="(max-width: 1200px) 100vw, 1200px"
-                  src="{{img_url feature_image size="m"}}"
-                  alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                >
-              </a>
-              <figcaption>
-                <div class="md-typeset">
-                  <h1><a href="{{url}}">{{title}}</a></h1>
-                  <p>
-                    {{excerpt}}
-                  </p>
-                </div>
-                <div class="md-post__meta md-meta">
-                  <ul class="md-meta__list">
-                    <li class="md-meta__item">
-                      <time datetime="{{date format="YYYY-MM-DD"}}">
-                        {{date format="MMMM DD, YYYY"}}
-                      </time>
-                    </li>
-                    <li class="md-meta__item">
-                      <a href="{{url}}" class="md-meta__link">Watch the latest →</a>
-                    </li>
-                  </ul>
-                </div>
-              </figcaption>
-            </figure>
-          {{/foreach}}
+  {{^is "paged"}}
+    <section class="mdx-container">
+      <section class="mdx-parallax__group mdx-video-spotlight">
+        <div class="md-content md-grid" data-md-component="content">
+          <div class="md-content__inner">
+            <div class="mdx-spotlight">
+              {{#foreach posts limit="1"}}
+                {{> "components/video-spotlight-figure"}}
+              {{/foreach}}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-</section>
+      </section>
+    </section>
+  {{/is}}
 {{/contentFor}}
 
 <div class="md-main__inner md-grid">
@@ -89,9 +58,15 @@
       </header>
       {{/tag}}
 
-      {{#foreach posts from="2"}}
+      {{^is "paged"}}
+        {{#foreach posts from="2"}}
           {{> "components/post" action="Watch now →"}}
-      {{/foreach}}
+        {{/foreach}}
+      {{else}}
+        {{#foreach posts}}
+          {{> "components/post" action="Watch now →"}}
+        {{/foreach}}
+      {{/is}}
 
       {{pagination}}
 
