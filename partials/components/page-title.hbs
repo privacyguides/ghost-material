@@ -2,16 +2,16 @@
   <span class="md-ellipsis">
     {{#is "post, page, tag"}}
       {{#is "post"}}
-        {{#post}}{{title}}{{/post}}
+        {{title}}
       {{/is}}
       {{#is "page"}}
-        {{#page}}{{title}}{{/page}}
+        {{title}}
       {{/is}}
       {{#is "tag"}}
-        {{#tag}}{{name}}{{/tag}}
+        {{name}}
       {{/is}}
       {{#is author}}
-        {{#primary_author}}{{name}}{{/primary_author}}
+        {{name}}
       {{/is}}
     {{else}}
       {{@site.title}}

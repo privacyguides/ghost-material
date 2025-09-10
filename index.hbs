@@ -30,7 +30,14 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <h1 class="gh-pagehead-title">Latest in {{name}}</h1>
+        <h1 class="gh-pagehead-title">Latest
+          {{#is tag}}
+            in <a href="{{url}}">{{name}}</a>
+          {{/is}}
+          {{#is author}}
+            by <a href="{{url}}">{{name}}</a>
+          {{/is}}
+        </h1>
       </header>
 
       {{#foreach posts}}
