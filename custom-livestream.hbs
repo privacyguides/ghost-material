@@ -1,5 +1,17 @@
 {{!< default}}
 
+{{#contentFor "extraHead"}}
+<style>
+  .md-typeset .kg-card.kg-embed-card {
+    aspect-ratio: 16 / 9;
+  }
+  .md-typeset .kg-card.kg-embed-card > iframe {
+    height: 100%;
+    width: 100%;
+  }
+</style>
+{{/contentFor}}
+
 {{#post}}
 <div class="md-main__inner md-grid">
   {{> "components/post-sidebar"}}
@@ -14,7 +26,14 @@
 
   <div class="md-content" data-md-component="content">
     <article class="md-content__inner md-typeset">
-      {{> "components/post-header"}}
+      <header class="md-post__header">
+        {{#if excerpt}}
+          <div class="md-tags">
+            <span class="md-tag">{{excerpt}}</span>
+          </div>
+        {{/if}}
+        <h1 class="md-post__title">{{title}}</h1>
+      </header>
       <section class="md-post__content gh-content gh-canvas">
         {{content}}
       </section>
