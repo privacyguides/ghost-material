@@ -13,9 +13,13 @@
   </a>
   <figcaption>
     <div class="md-typeset">
-      <h1><a href="{{url}}">{{title}}</a></h1>
+      <h1><a href="{{url}}">{{#if custom_title}}{{custom_title}}{{else}}{{title}}{{/if}}</a></h1>
       <p>
-        {{excerpt}}
+        {{#if custom_excerpt}}
+          {{custom_excerpt}}
+        {{else}}
+          {{excerpt}}
+        {{/if}}
       </p>
     </div>
     <div class="md-post__meta md-meta">

@@ -4,9 +4,22 @@
       <div class="mdx-spotlight">
         {{#get "tags" filter="slug:videos"}}
           {{#foreach tags}}
-            {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="2"}}
+            {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="1"}}
               {{#foreach posts}}
                 {{> "components/video-spotlight-figure"}}
+              {{/foreach}}
+            {{/get}}
+          {{/foreach}}
+        {{/get}}
+        {{#get "tags" filter="slug:this-week-in-privacy"}}
+          {{#foreach tags}}
+            {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="1"}}
+              {{#foreach posts}}
+                {{> "components/video-spotlight-figure" 
+                    custom_title="This Week in Privacy 🔴 Live" 
+                    custom_excerpt="We're live on YouTube Fridays at 4 PM CST / 21:00 UTC to talk about privacy news from around the industry, updates from our own team, and anything else you want to discuss." 
+                    action="Watch the latest VOD →"
+                }}
               {{/foreach}}
             {{/get}}
           {{/foreach}}
