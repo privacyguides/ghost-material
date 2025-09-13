@@ -1,0 +1,31 @@
+{{!< default}}
+
+{{#page}}
+<div class="md-main__inner md-grid">
+  {{#if @page.show_title_and_feature_image}}
+    {{> "components/nav-sidebar"}}
+    {{> "components/post-sidebar"}}
+
+    <div class="md-content" data-md-component="content">
+      <article class="md-content__inner md-typeset">
+        {{> "components/post-header"}}
+        <section class="md-post__content gh-content gh-canvas">
+          {{content}}
+        </section>
+        {{> "components/comments"}}
+      </article>
+    </div>
+  {{else}}
+    <div class="md-content md-content--full-width" data-md-component="content">
+      {{> "components/nav-sidebar" hide-desktop="true"}}
+
+      <article class="md-content__inner md-typeset">
+        <section class="md-post__content gh-content gh-canvas">
+          {{content}}
+        </section>
+        {{> "components/comments"}}
+      </article>
+    </div>
+  {{/if}}
+  </div>
+{{/page}}
