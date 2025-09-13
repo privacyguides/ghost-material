@@ -4,7 +4,14 @@
 <div class="md-main__inner md-grid">
   {{#if @page.show_title_and_feature_image}}
     {{> "components/nav-sidebar"}}
-    {{> "components/post-sidebar"}}
+
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          <!-- empty -->
+        </div>
+      </div>
+    </div>
 
     <div class="md-content" data-md-component="content">
       <article class="md-content__inner md-typeset">
@@ -12,7 +19,6 @@
         <section class="md-post__content gh-content gh-canvas">
           {{content}}
         </section>
-        {{> "components/comments"}}
       </article>
     </div>
   {{else}}
@@ -23,7 +29,6 @@
         <section class="md-post__content gh-content gh-canvas">
           {{content}}
         </section>
-        {{> "components/comments"}}
       </article>
     </div>
   {{/if}}
