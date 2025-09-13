@@ -171,6 +171,11 @@ h1, h2, h3, .md-header__topic {
     background-color: var(--hero-button-color-for-dark-mode, var(--md-typeset-color));
     color: var(--hero-button-text-color-for-dark-mode, var(--md-primary-fg-color));
 }
+[data-md-color-scheme="slate"] .mdx-hero .md-button--primary:hover {
+    background-color: var(--ghost-accent-color, var(--md-typeset-color));
+    color: var(--hero-button-text-color, var(--md-primary-fg-color));
+    border-color: transparent;
+}
 
 .mdx-hero {
     margin: 0 0.8rem;
