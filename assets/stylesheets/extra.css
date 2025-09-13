@@ -20,6 +20,19 @@
 /// DEALINGS
 */
 
+/* body font */
+:root body {
+    --md-text-font-family: var(--gh-font-body, var(--font-sans))!important;
+}
+
+/* header font */
+.md-header__topic:first-child {
+    font-weight: 300;
+}
+h1, h2, h3, .md-header__topic {
+    font-family: var(--gh-font-heading, var(--font-serif));
+}
+
 /* Define brand */
 :root, [data-md-color-scheme="default"] {
     --md-default-bg-color: rgb(247, 247, 252);
@@ -136,15 +149,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-}
-
-/* header font */
-
-.md-header__topic:first-child {
-    font-weight: 300;
-}
-h1, h2, h3, .md-header__topic {
-    font-family: "Bagnard", serif;
 }
 
 /* Recommendation cards */
