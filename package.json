@@ -39,7 +39,12 @@
                 "width": 2000
             }
         },
-        "card_assets": true
+        "card_assets": true,
+        "custom": {
+            "publication_logo_for_dark_mode": {
+                "type": "image"
+            }
+        }
     },
     "scripts": {
         "dev": "gulp",

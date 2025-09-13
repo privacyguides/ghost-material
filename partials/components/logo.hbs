@@ -1,0 +1,6 @@
+{{#if @custom.publication_logo_for_dark_mode}}
+  <img src="{{@site.logo}}#only-light" alt="{{@site.title}}">
+  <img src="{{@custom.publication_logo_for_dark_mode}}#only-dark" alt="{{@site.title}}">
+{{else}}
+  <img src="{{@site.logo}}" alt="{{@site.title}}">
+{{/if}}
