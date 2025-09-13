@@ -1,7 +1,6 @@
 {{!< default}}
 
 {{#contentFor "extraHead"}}
-  <link rel="stylesheet" href="{{asset "stylesheets/home.css"}}">
   <link rel="alternate" href="https://www.privacyguides.org/" hreflang="x-default">
   <link rel="alternate" href="https://www.privacyguides.org/en/" hreflang="en">
   <link rel="alternate" href="https://www.privacyguides.org/es/" hreflang="es">
@@ -11,6 +10,46 @@
   <link rel="alternate" href="https://www.privacyguides.org/nl/" hreflang="nl">
   <link rel="alternate" href="https://www.privacyguides.org/zh-Hant/" hreflang="zh-Hant">
   <link rel="alternate" href="https://www.privacyguides.org/ru/" hreflang="ru">
+  <style>
+    nav[class="md-tabs"] {
+        border-bottom: none;
+    }
+    .mdx-parallax__group{
+        background-color:var(--md-default-bg-color);
+        color:var(--md-typeset-color);
+    }
+    .md-typeset h2{
+        font-weight:700;
+        margin-top:.175em
+    }
+    .md-typeset h2+h3{
+        font-size:1em;
+        margin-top:-.8em
+    }
+    .md-typeset :target{
+        --md-scroll-margin:5.2rem
+    }
+    .md-main__inner{
+        margin:0
+    }
+    .md-main__inner>.md-content,.md-main__inner>.md-sidebar--secondary{
+        display:none
+    }
+    .md-content__inner{
+        margin-bottom:0;
+        padding:3rem 0
+    }
+    .md-content__inner:before{
+        display:none
+    }
+    .md-content header{
+        display:block;
+        transition:opacity .75s
+    }
+    .js .md-content header[hidden]{
+        opacity:0
+    }
+  </style>
 {{/contentFor}}
 
 {{#contentFor "extraNavIcons"}}

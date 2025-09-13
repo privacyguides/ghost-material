@@ -1,7 +1,11 @@
 {{!< default}}
 
 {{#contentFor "extraHead"}}
-  <link rel="stylesheet" href="{{asset "stylesheets/spotlight.css"}}">
+  <style>
+    nav[class="md-tabs"] {
+      border-bottom: none;
+    }
+  </style>
 {{/contentFor}}
 
 {{#contentFor "beforeContent"}}
