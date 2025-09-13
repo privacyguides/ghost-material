@@ -1,37 +1,28 @@
 {{#if isSecondary}}
-<nav class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a
-      href="{{@site.url}}"
-      title="{{@site.title}}"
-      class="md-nav__button md-logo"
-      aria-label="{{@site.title}}"
-      data-md-component="logo"
-    >
-      <img src="{{@site.logo}}" alt="{{@site.title}}">
-    </a>
-    {{@site.title}}
-  </label>
-
-  <ul class="md-nav__list">
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-        <span class="md-ellipsis">Navigation</span>
-      </label>
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-        <ul class="md-nav__list">
-          {{#foreach navigation}}
-          <li class="nav-{{slug}} md-nav__item{{#if current}} md-nav__item--active{{/if}}">
-            <a href="{{url absolute="true"}}" class="md-nav__link{{#if current}} md-nav__link--active{{/if}}">
-              {{label}}
-            </a>
-          </li>
-          {{/foreach}}
-        </ul>
-      </nav>
-    </li>
-    
-  </ul>
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+    <label class="md-nav__title" for="__drawer">
+      <a
+        href="{{@site.url}}"
+        title="{{@site.title}}"
+        class="md-nav__button md-logo"
+        aria-label="{{@site.title}}"
+        data-md-component="logo"
+      >
+        <img src="{{@site.logo}}" alt="{{@site.title}}">
+      </a>
+      {{@site.title}}
+    </label>
+   <ul class="md-nav__list">
+      {{#foreach navigation}}
+      <li class="md-nav__item{{#if current}} md-nav__item--active{{/if}} nav-{{slug}}">
+         <a href="{{url absolute="true"}}" class="md-nav__link{{#if current}} md-nav__link--active{{/if}}">
+         <span class="md-ellipsis">
+         {{label}}
+         </span>
+         </a>
+      </li>
+      {{/foreach}}
+   </ul>
 </nav>
 {{else}}
 <ul class="nav md-tabs__list">
