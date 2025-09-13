@@ -22,20 +22,35 @@
 */
 
 .mdx-container {
-    background: #ffdd98;
+    background: var(--hero-background-color, #ffdd98);
     background-size: contain;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 [data-md-color-scheme="slate"] .mdx-container, [data-md-color-scheme="slate"] .mdx-parallax__group.mdx-why-care {
-    background: rgba(9, 9, 9, 0.95);
+    background: var(--hero-background-color-for-dark-mode, #0a0a0a);
+}
+
+.mdx-hero h1, .mdx-hero p {
+    color: var(--hero-text-color, currentcolor);
+}
+[data-md-color-scheme="slate"] .mdx-hero h1, [data-md-color-scheme="slate"] .mdx-hero p {
+    color: var(--hero-text-color-for-dark-mode, currentcolor);
+}
+
+.mdx-hero .md-button--primary {
+    background-color: var(--hero-button-color, var(--md-typeset-color));
+    color: var(--hero-button-text-color, var(--md-primary-fg-color));
+}
+[data-md-color-scheme="slate"] .mdx-hero .md-button--primary {
+    background-color: var(--hero-button-color-for-dark-mode, var(--md-typeset-color));
+    color: var(--hero-button-text-color-for-dark-mode, var(--md-primary-fg-color));
 }
 
 .mdx-hero {
     margin: 0 0.8rem;
 }
 .mdx-hero h1 {
-    color: currentcolor;
     margin-bottom: 1rem;
     font-size: 2.6rem;
 }
@@ -55,12 +70,7 @@
         max-width: 45rem;
     }
 }
-[data-md-color-scheme="slate"] .mdx-hero .md-button--primary {
-    color: var(--md-primary-fg-color);
-}
 .mdx-hero .md-button--primary {
-    color: var(--md-primary-fg-color);
-    background-color: var(--md-typeset-color);
     border-color: transparent;
     margin-right: 0.5rem;
     margin-top: 0.5rem;

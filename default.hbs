@@ -4,6 +4,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{meta_title}}</title>
+
+    <style>
+      :root {
+          {{#if @custom.hero_background_color}}
+          --hero-background-color: {{@custom.hero_background_color}};
+          {{/if}}
+          {{#if @custom.hero_background_color_for_dark_mode}}
+          --hero-background-color-for-dark-mode: {{@custom.hero_background_color_for_dark_mode}};
+          {{/if}}
+          {{#match @custom.hero_text_color "Light"}}
+          --hero-text-color: #babcc0;
+          --hero-button-color: #babcc0;
+          --hero-button-text-color: #0a0a0a;
+          {{/match}}
+          {{#match @custom.hero_text_color "Dark"}}
+          --hero-text-color: #2d2d2d;
+          --hero-button-color: #2d2d2d;
+          --hero-button-text-color: #ffffff;
+          {{/match}}
+          {{#match @custom.hero_text_color "Yellow"}}
+          --hero-text-color: #ffd06f;
+          --hero-button-color: #ffd06f;
+          --hero-button-text-color: #0a0a0a;
+          {{/match}}
+          {{#match @custom.hero_text_color_for_dark_mode "Light"}}
+          --hero-text-color-for-dark-mode: #babcc0;
+          --hero-button-color-for-dark-mode: #babcc0;
+          --hero-button-text-color-for-dark-mode: #0a0a0a;
+          {{/match}}
+          {{#match @custom.hero_text_color_for_dark_mode "Dark"}}
+          --hero-text-color-for-dark-mode: #2d2d2d;
+          --hero-button-color-for-dark-mode: #2d2d2d;
+          --hero-button-text-color-for-dark-mode: #ffffff;
+          {{/match}}
+          {{#match @custom.hero_text_color_for_dark_mode "Yellow"}}
+          --hero-text-color-for-dark-mode: #ffd06f;
+          --hero-button-color-for-dark-mode: #ffd06f;
+          --hero-button-text-color-for-dark-mode: #0a0a0a;
+          {{/match}}
+      }
+    </style>
+
     <link rel="stylesheet" href="{{asset "stylesheets/main.8cce3a28.min.css"}}">
     <link rel="stylesheet" href="{{asset "stylesheets/palette.ab4e12ef.min.css"}}">
     <link rel="stylesheet" href="{{asset "stylesheets/koenig.css"}}">

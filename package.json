@@ -18,7 +18,7 @@
     ],
     "docs": "https://www.privacyguides.org/",
     "config": {
-        "posts_per_page": 7,
+        "posts_per_page": 20,
         "image_sizes": {
             "xs": {
                 "width": 150
@@ -43,6 +43,38 @@
         "custom": {
             "publication_logo_for_dark_mode": {
                 "type": "image"
+            },
+            "hero_heading": {
+                "type": "text",
+                "default": "Privacy Guides",
+                "group": "homepage"
+            },
+            "hero_subheading": {
+                "type": "text",
+                "default": "Privacy Guides is a comprehensive, non-profit resource for understanding and improving your online privacy.",
+                "group": "homepage"
+            },
+            "hero_background_color": {
+                "type": "color",
+                "default": "#ffdd98",
+                "group": "homepage"
+            },
+            "hero_background_color_for_dark_mode": {
+                "type": "color",
+                "default": "#0a0a0a",
+                "group": "homepage"
+            },
+            "hero_text_color": {
+                "type": "select",
+                "options": ["Dark", "Light", "Yellow"],
+                "default": "Dark",
+                "group": "homepage"
+            },
+            "hero_text_color_for_dark_mode": {
+                "type": "select",
+                "options": ["Dark", "Light", "Yellow"],
+                "default": "Light",
+                "group": "homepage"
             }
         }
     },
