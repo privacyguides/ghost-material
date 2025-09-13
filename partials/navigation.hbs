@@ -1,28 +1,94 @@
 {{#if isSecondary}}
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-    <label class="md-nav__title" for="__drawer">
-      <a
-        href="{{@site.url}}"
-        title="{{@site.title}}"
-        class="md-nav__button md-logo"
-        aria-label="{{@site.title}}"
-        data-md-component="logo"
-      >
-        <img src="{{@site.logo}}" alt="{{@site.title}}">
+  <label class="md-nav__title" for="__drawer">
+    <a
+      href="{{@site.url}}"
+      title="{{@site.title}}"
+      class="md-nav__button md-logo"
+      aria-label="{{@site.title}}"
+      data-md-component="logo"
+    >
+      <img src="{{@site.logo}}" alt="{{@site.title}}">
+    </a>
+    {{@site.title}}
+  </label>
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+      <a href="{{@site.url}}" class="md-nav__link">
+        <span class="md-ellipsis">
+          Home
+        </span>
       </a>
-      {{@site.title}}
-    </label>
-   <ul class="md-nav__list">
-      {{#foreach navigation}}
-      <li class="md-nav__item{{#if current}} md-nav__item--active{{/if}} nav-{{slug}}">
-         <a href="{{url absolute="true"}}" class="md-nav__link{{#if current}} md-nav__link--active{{/if}}">
-         <span class="md-ellipsis">
-         {{label}}
-         </span>
-         </a>
-      </li>
-      {{/foreach}}
-   </ul>
+    </li>
+    <li class="md-nav__item">
+      <a href="https://www.privacyguides.org/en/basics/why-privacy-matters/" class="md-nav__link">
+        <span class="md-ellipsis">
+          Knowledge Base
+        </span>
+      </a>
+    </li>
+    <li class="md-nav__item">
+      <a href="https://www.privacyguides.org/en/tools/" class="md-nav__link">
+        <span class="md-ellipsis">
+          Recommendations
+        </span>
+      </a>
+    </li>
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+      <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+        <span class="md-ellipsis">
+          Videos
+        </span>
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Navigation
+        </label>
+        <ul class="md-nav__list">
+          {{#foreach navigation}}
+            <li class="md-nav__item{{#if current}} md-nav__item--active{{/if}}">
+              <a href="{{url absolute="true"}}" class="md-nav__link{{#if current}} md-nav__link--active{{/if}}">
+                <span class="md-ellipsis">
+                  {{label}}
+                </span>
+              </a>
+            </li>
+          {{/foreach}}
+        </ul>
+      </nav>
+    </li>
+    <li class="md-nav__item">
+      <a href="https://www.privacyguides.org/videos/" class="md-nav__link">
+        <span class="md-ellipsis">
+          Videos
+        </span>
+      </a>
+    </li>
+    <li class="md-nav__item">
+      <a href="https://discuss.privacyguides.net/" class="md-nav__link">
+        <span class="md-ellipsis">
+          Forum
+        </span>
+      </a>
+    </li>
+    <li class="md-nav__item">
+      <a href="https://discuss.privacyguides.net/c/community-wiki/9411/none" class="md-nav__link">
+        <span class="md-ellipsis">
+          Wiki
+        </span>
+      </a>
+    </li>
+    <li class="md-nav__item">
+      <a href="https://www.privacyguides.org/en/about/" class="md-nav__link">
+        <span class="md-ellipsis">
+          About
+        </span>
+      </a>
+    </li>
+  </ul>
 </nav>
 {{else}}
 <ul class="nav md-tabs__list">
