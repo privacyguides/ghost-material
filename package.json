@@ -44,6 +44,10 @@
             "publication_logo_for_dark_mode": {
                 "type": "image"
             },
+            "show_navigation_bar": {
+                "type": "boolean",
+                "default": true
+            },
             "hero_heading": {
                 "type": "text",
                 "default": "Privacy Guides",

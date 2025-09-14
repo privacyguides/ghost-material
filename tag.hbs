@@ -1,48 +1,64 @@
 {{!< default}}
 
-<div class="md-main__inner md-grid">
-  {{> "components/nav-sidebar"}}
+{{#contentFor "navPrimaryHome"}}
+  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked="">
+    <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+      <span class="md-ellipsis">
+        Home
+      </span>
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <label class="md-nav__title" for="__nav_1">
+        <span class="md-nav__icon md-icon"></span>
+        Navigation
+      </label>
+      <ul class="md-nav__list">
+        {{navigation type="secondary"}}
+      </ul>
+    </nav>
+  </li>
+{{/contentFor}}
 
-  <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-    <div class="md-sidebar__scrollwrap">
-      <div class="md-sidebar__inner">
-        <nav class="md-nav md-nav--secondary">
-          <label class="md-nav__title" for="__toc">
-            <span class="md-nav__icon md-icon"></span>
-            Table of contents
-          </label>
-          <ul class="md-nav__list" data-md-component="toc">
-            {{#foreach posts}}
-            <li class="md-nav__item">
-              <a href="{{url}}" class="md-nav__link">
-                <span class="md-ellipsis">
-                  {{title}}
-                </span>
-              </a>
-            </li>
-            {{/foreach}}
-          </ul>
-        </nav>
-      </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+  <div class="md-sidebar__scrollwrap">
+    <div class="md-sidebar__inner">
+      <nav class="md-nav md-nav--secondary">
+        <label class="md-nav__title" for="__toc">
+          <span class="md-nav__icon md-icon"></span>
+          Table of contents
+        </label>
+        <ul class="md-nav__list" data-md-component="toc">
+          {{#foreach posts}}
+          <li class="md-nav__item">
+            <a href="{{url}}" class="md-nav__link">
+              <span class="md-ellipsis">
+                {{title}}
+              </span>
+            </a>
+          </li>
+          {{/foreach}}
+        </ul>
+      </nav>
     </div>
   </div>
+</div>
 
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      {{#tag}}
-      <header class="md-typeset">
-        <h1 class="gh-pagehead-title">Latest in {{name}}</h1>
-        <p>{{description}}</p>
-      </header>
-      {{/tag}}
+<div class="md-content" data-md-component="content">
+  <div class="md-content__inner">
+    {{#tag}}
+    <header class="md-typeset">
+      <h1 class="gh-pagehead-title">Latest in {{name}}</h1>
+      <p>{{description}}</p>
+    </header>
+    {{/tag}}
 
-      {{#foreach posts}}
-          {{> "components/post"}}
-      {{/foreach}}
+    {{#foreach posts}}
+        {{> "components/post"}}
+    {{/foreach}}
 
-      {{pagination}}
+    {{pagination}}
 
-    </div>
   </div>
-  
 </div>

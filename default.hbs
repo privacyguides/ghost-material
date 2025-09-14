@@ -108,18 +108,58 @@
     </header>
 
     <div class="md-container" data-md-component="container">
+      {{#if @custom.show_navigation_bar}}
       <nav class="md-tabs" data-md-component="tabs">
         <div class="md-grid">
-          {{navigation}}
+          <ul class="nav md-tabs__list">
+            <li class="md-tabs__item">
+              <a href="https://www.privacyguides.org/en/" class="md-tabs__link">
+                <span class="md-ellipsis">
+                  Home
+                </span>
+              </a>
+            </li>
+            {{> "components/static-tabs" liClass="md-tabs__item" linkClass="md-tabs__link"}}
+          </ul>
         </div>
       </nav>
+      {{/if}}
 
       {{{block "beforeContent"}}}
 
       <main class="md-main" data-md-component="main">
-      {{{body}}}
-      <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-      <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+        <div class="md-main__inner md-grid">
+          <div class="md-sidebar md-sidebar--primary {{{block "navPrimaryClass"}}}" data-md-component="sidebar" data-md-type="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+                  <label class="md-nav__title" for="__drawer">
+                    <a
+                      href="{{@site.url}}"
+                      title="{{@site.title}}"
+                      class="md-nav__button md-logo"
+                      aria-label="{{@site.title}}"
+                      data-md-component="logo"
+                    >
+                      {{> "components/logo"}}
+                    </a>
+                    {{@site.title}}
+                  </label>
+                  <ul class="md-nav__list">
+                    {{{block "navPrimaryHome"}}}
+                    {{> "components/static-tabs" liClass="md-nav__item" linkClass="md-nav__link"}}
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          {{{body}}}
+        </div>
+
+        <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+        <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
       </main>
 
       {{{block "afterContent"}}}

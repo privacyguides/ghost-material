@@ -1,10 +1,28 @@
 {{!< default}}
 
-{{#page}}
-<div class="md-main__inner md-grid">
-  {{#if @page.show_title_and_feature_image}}
-    {{> "components/nav-sidebar"}}
+{{#contentFor "navPrimaryHome"}}
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+  <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked="">
+  <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+    <span class="md-ellipsis">
+      Home
+    </span>
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+    <label class="md-nav__title" for="__nav_1">
+      <span class="md-nav__icon md-icon"></span>
+      Navigation
+    </label>
+    <ul class="md-nav__list">
+      {{navigation}}
+    </ul>
+  </nav>
+</li>
+{{/contentFor}}
 
+{{#page}}
+  {{#if @page.show_title_and_feature_image}}
     <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
       <div class="md-sidebar__scrollwrap">
         <div class="md-sidebar__inner">
@@ -23,8 +41,6 @@
     </div>
   {{else}}
     <div class="md-content md-content--full-width" data-md-component="content">
-      {{> "components/nav-sidebar" hide-desktop="true"}}
-
       <article class="md-content__inner md-typeset">
         <section class="md-post__content gh-content gh-canvas">
           {{content}}
@@ -32,5 +48,4 @@
       </article>
     </div>
   {{/if}}
-  </div>
 {{/page}}
