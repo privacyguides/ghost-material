@@ -1,5 +1,5 @@
 <figure class="mdx-spotlight__feature">
-  <a href="{{url}}" tabindex="-1">
+  <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" tabindex="-1">
     <img
       srcset="{{img_url feature_image size="s" absolute="true"}} 300w,
               {{img_url feature_image size="m" absolute="true"}} 720w,
@@ -13,7 +13,7 @@
   </a>
   <figcaption>
     <div class="md-typeset">
-      <h1><a href="{{url}}">{{#if custom_title}}{{custom_title}}{{else}}{{title}}{{/if}}</a></h1>
+      <h1><a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}">{{#if custom_title}}{{custom_title}}{{else}}{{title}}{{/if}}</a></h1>
       <p>
         {{#if custom_excerpt}}
           {{custom_excerpt}}
@@ -30,7 +30,7 @@
           </time>
         </li>
         <li class="md-meta__item">
-          <a href="{{url}}" class="md-meta__link">{{#if action}}{{action}}{{else}}Watch now →{{/if}}</a>
+          <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" class="md-meta__link">{{#if action}}{{action}}{{else}}Watch now →{{/if}}</a>
         </li>
       </ul>
     </div>
