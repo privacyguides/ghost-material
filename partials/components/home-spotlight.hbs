@@ -2,7 +2,7 @@
   <div class="md-content md-grid" data-md-component="content">
     <div class="md-content__inner">
       <div class="mdx-spotlight">
-        {{#get "tags" filter="slug:articles"}}
+        {{#get "tags" filter="slug:articles+visibility:public"}}
           {{#foreach tags}}
             {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="1"}}
               {{#foreach posts}}
@@ -13,7 +13,7 @@
             {{/get}}
           {{/foreach}}
         {{/get}}
-        {{#get "tags" filter="slug:videos"}}
+        {{#get "tags" filter="slug:videos+visibility:public"}}
           {{#foreach tags}}
             {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="1"}}
               {{#foreach posts}}
@@ -22,7 +22,7 @@
             {{/get}}
           {{/foreach}}
         {{/get}}
-        {{#get "tags" filter="slug:this-week-in-privacy"}}
+        {{#get "tags" filter="slug:this-week-in-privacy+visibility:public"}}
           {{#foreach tags}}
             {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="1"}}
               {{#foreach posts}}
