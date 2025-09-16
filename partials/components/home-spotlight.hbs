@@ -6,7 +6,9 @@
           {{#foreach tags}}
             {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="1"}}
               {{#foreach posts}}
-                {{> "components/spotlight-figure"}}
+                {{> "components/spotlight-figure"
+                    action="Continue reading →"
+                }}
               {{/foreach}}
             {{/get}}
           {{/foreach}}

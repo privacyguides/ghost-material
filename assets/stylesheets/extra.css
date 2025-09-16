@@ -357,7 +357,7 @@ h1, h2, h3, .md-header__topic {
     display:block;
     height:auto;
     max-width:100%;
-    width:25rem
+    width:23rem
 }
 .mdx-spotlight__feature a>img,.mdx-spotlight__feature figcaption{
     transition:transform .75s cubic-bezier(.075,.85,.175,1) 125ms,opacity .75s 125ms
