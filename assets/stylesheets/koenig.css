@@ -41,3 +41,13 @@
 .md-typeset .kg-bookmark-metadata .kg-bookmark-icon {
   margin-right: 6px;
 }
+
+/* Upgrade/paywall CTA */
+.md-typeset .gh-post-upgrade-cta small {
+  color: #ffffff;
+}
+p:has(+ .gh-post-upgrade-cta) {
+  -webkit-mask-image: linear-gradient(to bottom, var(--md-default-bg-color) 1%, transparent 100%);
+  mask-image: linear-gradient(to bottom, var(--md-default-bg-color) 1%, transparent 100%);
+  margin-bottom: 1.5em;
+}
