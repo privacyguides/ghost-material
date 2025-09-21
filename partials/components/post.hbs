@@ -4,7 +4,7 @@
       <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}">{{title}}</a>
     </h2>
     <header class="md-post__header">
-      {{#if author}}
+      {{#if show_authors}}
         <nav class="md-post__authors md-typeset">
           {{#foreach authors limit="3"}}
             <span class="md-author">

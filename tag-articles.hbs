@@ -38,7 +38,7 @@
           <div class="md-content__inner">
             <div class="mdx-spotlight">
               {{#foreach posts limit="1"}}
-                {{> "components/spotlight-figure" action="Continue reading →" author="true"}}
+                {{> "components/spotlight-figure" action="Continue reading →" show_authors="true"}}
               {{/foreach}}
             </div>
           </div>
@@ -56,7 +56,7 @@
 
         {{^is "paged"}}
           {{#foreach posts from="2"}}
-            {{> "components/post" author="true"}}
+            {{> "components/post" show_authors="true"}}
           {{/foreach}}
           <div class="kg-card kg-signup-card kg-width-regular " data-lexical-signup-form="" style="background-color: rgb(240, 240, 240);">
             <div class="kg-signup-card-content">
@@ -101,7 +101,7 @@
 
         {{else}}
           {{#foreach posts}}
-            {{> "components/post" author="true"}}
+            {{> "components/post" show_authors="true"}}
           {{/foreach}}
         {{/is}}
 
