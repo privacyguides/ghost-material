@@ -28,7 +28,9 @@
         <nav class="md-post__authors md-typeset">
           {{#foreach authors limit="3"}}
             <span class="md-author">
-              <img src="{{profile_image}}" alt="{{name}}"> 
+              <a href="{{url}}">
+                <img src="{{profile_image}}" alt="{{name}}"> 
+              </a>
             </span>
           {{/foreach}}
         </nav>
