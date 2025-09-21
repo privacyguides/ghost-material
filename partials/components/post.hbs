@@ -4,7 +4,9 @@
       <nav class="md-post__authors md-typeset">
         {{#foreach authors limit="3"}}
           <span class="md-author">
-            <img src="{{profile_image}}" alt="{{name}}"> 
+            <a href="{{url}}">
+              <img src="{{profile_image}}" alt="{{name}}">
+            </a>
           </span>
         {{/foreach}}
       </nav>
@@ -32,7 +34,7 @@
       <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}">{{title}}</a>
     </h2>
     {{#if feature_image}}
-      <a href="{{url}}" class="gh-card-image-link">
+      <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" class="gh-card-image-link">
         <figure class="gh-card-image">
           <img
             srcset="{{img_url feature_image size="s"}} 300w,
@@ -51,7 +53,7 @@
       <p class="gh-card-excerpt">{{excerpt}}</p>
     {{/if}}
     <nav class="md-post__action">
-      <a href="{{url}}">
+      <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}">
         {{#if action}}{{action}}{{else}}Continue reading{{/if}}
       </a>
     </nav>
