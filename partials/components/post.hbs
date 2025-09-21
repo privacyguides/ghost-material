@@ -1,5 +1,14 @@
 <article class="md-post md-post--excerpt">
   <header class="md-post__header">
+    {{#if author}}
+      <nav class="md-post__authors md-typeset">
+        {{#foreach authors limit="3"}}
+          <span class="md-author">
+            <img src="{{profile_image}}" alt="{{name}}"> 
+          </span>
+        {{/foreach}}
+      </nav>
+    {{/if}}
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">

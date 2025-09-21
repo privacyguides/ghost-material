@@ -862,3 +862,15 @@ path[d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-
     display: none!important;
   }
 }
+
+/* Articles page grid fix */
+.grid .md-post .md-post__header .md-post__meta .md-meta__list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.grid .md-post .md-meta__item {
+  margin-left: 0px;
+}
