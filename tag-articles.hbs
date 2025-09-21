@@ -1,5 +1,13 @@
 {{!< default}}
 
+{{#contentFor "extraHead"}}
+  <style>
+    nav[class="md-tabs"] {
+      border-bottom: none;
+    }
+  </style>
+{{/contentFor}}
+
 {{#contentFor "navPrimaryClass"}}pg-hide-desktop{{/contentFor}}
 {{#contentFor "navPrimaryHome"}}
   <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
@@ -30,7 +38,7 @@
           <div class="md-content__inner">
             <div class="mdx-spotlight">
               {{#foreach posts limit="1"}}
-                {{> "components/spotlight-figure" action="Continue reading →"}}
+                {{> "components/spotlight-figure" action="Continue reading →" author="true"}}
               {{/foreach}}
             </div>
           </div>
@@ -44,7 +52,7 @@
   <div class="md-content__inner">
     {{#tag}}
     <header class="md-typeset">
-      <h1 class="gh-pagehead-title">Latest Articles</h1>
+      <h1 class="gh-pagehead-title">Read the Latest Articles</h1>
       <p>{{description}}</p>
     </header>
     {{/tag}}

@@ -874,3 +874,6 @@ path[d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-
 .grid .md-post .md-meta__item {
   margin-left: 0px;
 }
+.mdx-spotlight__feature .md-post--excerpt {
+  margin-bottom: 0;
+}

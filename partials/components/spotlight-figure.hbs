@@ -11,7 +11,7 @@
       alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
     >
   </a>
-  <figcaption>
+  <figcaption class="md-post md-post--excerpt">
     <div class="md-typeset">
       <h1><a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}">{{#if custom_title}}{{custom_title}}{{else}}{{title}}{{/if}}</a></h1>
       <p>
@@ -22,17 +22,32 @@
         {{/if}}
       </p>
     </div>
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="{{date format="YYYY-MM-DD"}}">
-            {{date format="MMMM DD, YYYY"}}
-          </time>
-        </li>
-        <li class="md-meta__item">
-          <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" class="md-meta__link">{{#if action}}{{action}}{{else}}Watch now →{{/if}}</a>
-        </li>
-      </ul>
-    </div>
+
+    <header class="md-post__header">
+      {{#if author}}
+        <nav class="md-post__authors md-typeset">
+          {{#foreach authors limit="3"}}
+            <span class="md-author">
+              <img src="{{profile_image}}" alt="{{name}}"> 
+            </span>
+          {{/foreach}}
+        </nav>
+      {{/if}}
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="{{date format="YYYY-MM-DD"}}">
+              {{date format="MMMM DD, YYYY"}}
+            </time>
+          </li>
+          <li class="md-meta__item">
+            <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" class="md-meta__link">{{#if action}}{{action}}{{else}}Watch now →{{/if}}</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    
   </figcaption>
 </figure>
