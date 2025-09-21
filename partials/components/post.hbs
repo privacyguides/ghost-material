@@ -1,38 +1,38 @@
 <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    {{#if author}}
-      <nav class="md-post__authors md-typeset">
-        {{#foreach authors limit="3"}}
-          <span class="md-author">
-            <a href="{{url}}">
-              <img src="{{profile_image}}" alt="{{name}}">
-            </a>
-          </span>
-        {{/foreach}}
-      </nav>
-    {{/if}}
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="{{date format="YYYY-MM-DD"}}">
-            {{date format="MMMM DD, YYYY"}}
-          </time>
-        </li>
-        {{#if category}}
-          <li class="md-meta__item">
-            in
-            {{#primary_tag}}
-              <a href="{{url}}" class="md-meta__link">{{name}}</a>
-            {{/primary_tag}}
-          </li>
-        {{/if}}
-      </ul>
-    </div>
-  </header>
   <div class="md-post__content md-typeset">
     <h2 class="gh-card-title">
       <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}">{{title}}</a>
     </h2>
+    <header class="md-post__header">
+      {{#if author}}
+        <nav class="md-post__authors md-typeset">
+          {{#foreach authors limit="3"}}
+            <span class="md-author">
+              <a href="{{url}}">
+                <img src="{{profile_image}}" alt="{{name}}">
+              </a>
+            </span>
+          {{/foreach}}
+        </nav>
+      {{/if}}
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="{{date format="YYYY-MM-DD"}}">
+              {{date format="MMMM DD, YYYY"}}
+            </time>
+          </li>
+          {{#if category}}
+            <li class="md-meta__item">
+              in
+              {{#primary_tag}}
+                <a href="{{url}}" class="md-meta__link">{{name}}</a>
+              {{/primary_tag}}
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+    </header>
     {{#if feature_image}}
       <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" class="gh-card-image-link">
         <figure class="gh-card-image">
