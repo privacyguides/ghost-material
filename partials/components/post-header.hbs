@@ -34,6 +34,11 @@
   <nav class="gh-author-list">
     {{#foreach authors}}
       <div class="gh-author">
+        {{#if @first}}
+          <span>
+            By:
+          </span>
+        {{/if}}
         <a class="md-author" href="{{url}}">
           <img src="{{profile_image}}" alt="{{name}}" />
         </a>
