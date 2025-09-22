@@ -56,7 +56,7 @@
 
         {{^is "paged"}}
           {{#foreach posts from="2"}}
-            {{> "components/post" show_authors="true"}}
+            {{> "components/post-preview" show_authors="true"}}
           {{/foreach}}
           <div class="kg-card kg-signup-card kg-width-regular " data-lexical-signup-form="" style="background-color: rgb(240, 240, 240);">
             <div class="kg-signup-card-content">
@@ -101,7 +101,7 @@
 
         {{else}}
           {{#foreach posts}}
-            {{> "components/post" show_authors="true"}}
+            {{> "components/post-preview" show_authors="true"}}
           {{/foreach}}
         {{/is}}
 

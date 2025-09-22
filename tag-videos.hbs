@@ -82,11 +82,11 @@
 
     {{^is "paged"}}
       {{#foreach posts from="2"}}
-        {{> "components/post" action="Watch now →"}}
+        {{> "components/post-preview" action="Watch now →"}}
       {{/foreach}}
     {{else}}
       {{#foreach posts}}
-        {{> "components/post" action="Watch now →"}}
+        {{> "components/post-preview" action="Watch now →"}}
       {{/foreach}}
     {{/is}}
 
