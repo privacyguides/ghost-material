@@ -23,11 +23,9 @@
       {{#if show_authors}}
         <nav class="md-post__authors md-typeset">
           {{#foreach authors limit="3"}}
-            <span class="md-author">
-              <a href="{{url}}">
-                <img src="{{profile_image}}" alt="{{name}}">
-              </a>
-            </span>
+            <a class="md-author" href="{{url}}">
+              <img src="{{profile_image}}" alt="{{name}}">
+            </a>
           {{/foreach}}
         </nav>
       {{/if}}
