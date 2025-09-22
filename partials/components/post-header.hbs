@@ -17,6 +17,20 @@
     {{/has}}
   </nav>
   <h1 class="md-post__title">{{title}}</h1>
+  {{#if feature_image}}
+    <figure class="gh-card-image">
+      <img
+        srcset="{{img_url feature_image size="s"}} 300w,
+                {{img_url feature_image size="m"}} 720w,
+                {{img_url feature_image size="l"}} 960w,
+                {{img_url feature_image size="xl"}} 1200w,
+                {{img_url feature_image size="xxl"}} 2000w"
+        sizes="(max-width: 1200px) 100vw, 1200px"
+        src="{{img_url feature_image size="m"}}"
+        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+      >
+    </figure>
+  {{/if}}
   <nav class="gh-author-list">
     {{#foreach authors}}
       <div class="gh-author">
@@ -32,18 +46,4 @@
       </div>
     {{/foreach}}
   </nav>
-  {{#if feature_image}}
-    <figure class="gh-card-image">
-      <img
-        srcset="{{img_url feature_image size="s"}} 300w,
-                {{img_url feature_image size="m"}} 720w,
-                {{img_url feature_image size="l"}} 960w,
-                {{img_url feature_image size="xl"}} 1200w,
-                {{img_url feature_image size="xxl"}} 2000w"
-        sizes="(max-width: 1200px) 100vw, 1200px"
-        src="{{img_url feature_image size="m"}}"
-        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-      >
-    </figure>
-  {{/if}}
 </header>
