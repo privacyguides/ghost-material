@@ -38,35 +38,32 @@
   <div class="md-content" data-md-component="content">
     <article class="md-content__inner md-typeset">
       <header class="md-post__header">
-        {{#if excerpt}}
-          <div class="md-tags">
-            <span class="md-tag">{{excerpt}}</span>
-          </div>
-        {{/if}}
-        <h1 class="md-post__title">{{title}}</h1>
-        <nav class="gh-metadata-list">
-          <span title="Date Published" class="gh-author">
-            <span class="twemoji">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"></path></svg>
-            </span>
-            <time datetime="{{date format="YYYY-MM-DDTHH:mm:ssZ"}}" class="md-ellipsis">
-              {{date format="MMMM DD, YYYY"}}
-            </time>
-          </span>
-          {{#foreach authors}}
-            <div class="gh-author">
-              <a class="md-author" href="{{url}}">
-                <img src="{{profile_image}}" alt="{{name}}" />
-              </a>
-              <span class="md-profile__description">
-                <strong>
-                  <a href="{{url}}"><span>{{name}}</span></a>
-                </strong>
-                <br />
+        <div class="md-tags">
+          <nav class="gh-metadata-list">
+            <span title="Date Published" class="gh-author">
+              <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"></path></svg>
               </span>
-            </div>
-          {{/foreach}}
-        </nav>
+              <time datetime="{{date format="YYYY-MM-DDTHH:mm:ssZ"}}" class="md-ellipsis">
+                {{date format="MMMM DD, YYYY"}}
+              </time>
+            </span>
+            {{#foreach authors}}
+              <div class="gh-author">
+                <a class="md-author" href="{{url}}">
+                  <img src="{{profile_image}}" alt="{{name}}" />
+                </a>
+                <span class="md-profile__description">
+                  <strong>
+                    <a href="{{url}}"><span>{{name}}</span></a>
+                  </strong>
+                  <br />
+                </span>
+              </div>
+            {{/foreach}}
+          </nav>
+        </div>
+        <h1 class="md-post__title">{{title}}</h1>
       </header>
       <section class="md-post__content gh-content gh-canvas">
         {{content}}
