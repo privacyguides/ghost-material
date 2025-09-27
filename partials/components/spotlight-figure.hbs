@@ -36,9 +36,15 @@
       <div class="md-post__meta md-meta">
         <ul class="md-meta__list">
           <li class="md-meta__item">
-            <time datetime="{{date format="YYYY-MM-DD"}}">
-              {{date format="MMMM DD, YYYY"}}
-            </time>
+            {{#has visibility="paid"}}
+              <time datetime="{{date format="YYYY-MM-DD"}}">
+                <span title="{{date format="MMMM DD, YYYY"}}">Members-Only{{#has tag="videos"}}: Early Access{{/has}}</span>
+              </time>
+            {{else}}
+              <time datetime="{{date format="YYYY-MM-DD"}}">
+                {{date format="MMMM DD, YYYY"}}
+              </time>
+            {{/has}}
           </li>
           <li class="md-meta__item">
             <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" class="md-meta__link">{{#if action}}{{action}}{{else}}Watch now →{{/if}}</a>
