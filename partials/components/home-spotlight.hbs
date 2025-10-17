@@ -29,6 +29,7 @@
                 <figure class="mdx-spotlight__feature">
                   <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" tabindex="-1">
                     <img
+                      class="spotlight-preview"
                       srcset="{{img_url feature_image size="s" absolute="true"}} 300w,
                               {{img_url feature_image size="m" absolute="true"}} 720w,
                               {{img_url feature_image size="l" absolute="true"}} 960w,
@@ -43,12 +44,23 @@
                     <div class="md-typeset">
                       <h1><a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}">This Week in Privacy 🔴 Live</a></h1>
                       <p>
-                        <a href="https://www.youtube.com/playlist?list=PL1m__5QdVZYwrrfLgBBAypcKMBlJtXUSP">
+                        <a class="podcast-button" href="https://www.youtube.com/playlist?list=PL1m__5QdVZYwrrfLgBBAypcKMBlJtXUSP">
                           <img alt="YouTube" src="{{asset 'images/podcast/youtube-light.svg'}}" width="118" height="40">
-                          YouTube
                         </a>
-                        <a href="https://podcasts.apple.com/podcast/id1726826455">
+                        <a class="podcast-button" href="https://fm.neat.tube/@thisweekinprivacy/feed.xml">
+                          <img alt="RSS Feed" src="{{asset 'images/podcast/rss-light.svg'}}" width="126" height="40">
+                        </a>
+                        <a class="podcast-button" href="https://podcasts.apple.com/podcast/id1726826455">
                           <img alt="Apple Podcasts" src="{{asset 'images/podcast/apple-light.svg'}}" width="174" height="40">
+                        </a>
+                        <a class="podcast-button" href="https://www.subscribeonandroid.com/fm.neat.tube/@thisweekinprivacy/feed.xml">
+                          <img alt="Subscribe on Android" src="{{asset 'images/podcast/subscribeonandroid-light.svg'}}" width="112" height="40">
+                        </a>
+                        <a class="podcast-button" href="https://music.amazon.com/podcasts/864d6ff9-57ee-41af-ac81-f9db053cd266/this-week-in-privacy">
+                          <img alt="Amazon Music" src="{{asset 'images/podcast/amazonmusic-light.svg'}}" width="166" height="40">
+                        </a>
+                        <a class="podcast-button" href="https://pca.st/pexbr5yc">
+                          <img alt="Pocket Casts" src="{{asset 'images/podcast/pocketcasts-light.svg'}}" width="155" height="40">
                         </a>
                       </p>
                     </div>

@@ -351,7 +351,7 @@ h1, h2, h3, .md-header__topic {
 .mdx-spotlight__feature>a:hover{
     transform:scale(1.025)
 }
-.mdx-spotlight__feature a>img{
+.mdx-spotlight__feature a>img.spotlight-preview{
     border-radius:.2rem;
     box-shadow:var(--md-shadow-z2);
     display:block;
@@ -359,7 +359,7 @@ h1, h2, h3, .md-header__topic {
     max-width:100%;
     width:23rem
 }
-.mdx-spotlight__feature a>img,.mdx-spotlight__feature figcaption{
+.mdx-spotlight__feature a>img.spotlight-preview,.mdx-spotlight__feature figcaption{
     transition:transform .75s cubic-bezier(.075,.85,.175,1) 125ms,opacity .75s 125ms
 }
 .mdx-spotlight__feature figcaption{
