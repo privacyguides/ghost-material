@@ -1,0 +1,155 @@
+{
+  "version": "v1.0.0",
+  "entity": {
+    "type": "group",
+    "role": "maintainer",
+    "name": "Privacy Guides",
+    "email": "team@privacyguides.org",
+    "description": "Privacy Guides is a not-for-profit, volunteer-run project that hosts online communities and publishes news and recommendations surrounding privacy and security tools, services, and knowledge.",
+    "webpageUrl": {
+      "url": "https://www.privacyguides.org"
+    }
+  },
+  "projects": [
+    {
+      "guid": "privacy-guides",
+      "name": "Privacy Guides",
+      "description": "Privacy Guides is a socially motivated website that provides information for protecting your data security and privacy. Our website is free of advertisements and not affiliated with any of the listed providers.",
+      "webpageUrl": {
+        "url": "https://www.privacyguides.org"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/privacyguides/privacyguides.org"
+      },
+      "licenses": [
+        "sped:CC-BY-SA-4.0"
+      ],
+      "tags": [
+        "privacy",
+        "education",
+        "documentation",
+        "computers",
+        "knowledge",
+        "linux",
+        "security"
+      ]
+    }
+  ],
+  "funding": {
+    "channels": [
+      {
+        "guid": "magic-campaign-onetime",
+        "type": "payment-provider",
+        "address": "https://donate.magicgrants.org/privacyguides/donate/privacyguides",
+        "description": "Donate with card or cryptocurrency via our fiscal host, Magic Grants 501(c)(3)"
+      },
+      {
+        "guid": "magic-manual-bank",
+        "type": "bank",
+        "description": "Please email info@magicgrants.org for banking details."
+      },
+      {
+        "guid": "github-sponsors",
+        "type": "payment-provider",
+        "address": "https://github.com/sponsors/privacyguides",
+        "description": "Support the project on GitHub"
+      },
+      {
+        "guid": "ghost-membership",
+        "type": "payment-provider",
+        "address": "https://www.privacyguides.org/en/about/donate/#/portal/signup",
+        "description": "Become a member of our newsletter and gain exclusive benefits"
+      },
+      {
+        "guid": "magic-campaign-membership",
+        "type": "payment-provider",
+        "address": "https://donate.magicgrants.org/privacyguides/membership",
+        "description": "Become a member with card or cryptocurrency via our fiscal host, Magic Grants 501(c)(3)"
+      },
+      {
+        "guid": "youtube-supporter",
+        "type": "payment-provider",
+        "address": "https://www.youtube.com/channel/UC8q5BGkSzK6Kafk_6gKV8HA/join",
+        "description": "Gain early access to new videos from Privacy Guides on YouTube"
+      },
+      {
+        "guid": "ghost-onetime",
+        "type": "payment-provider",
+        "address": "https://www.privacyguides.org/#/portal/support",
+        "description": "Send us a one-time donation via Stripe"
+      }
+    ],
+    "plans": [
+      {
+        "guid": "member",
+        "status": "active",
+        "name": "Membership",
+        "description": "Become a Privacy Guides Member to support our charitable mission and push privacy advocacy forward.",
+        "amount": 10,
+        "currency": "USD",
+        "frequency": "monthly",
+        "channels": [
+          "ghost-membership",
+          "magic-campaign-membership"
+        ]
+      },
+      {
+        "guid": "video-early-access",
+        "status": "active",
+        "name": "Video Early Access",
+        "description": "Gain early access to our latest videos by becoming a member or supporting us on YouTube.",
+        "amount": 2.99,
+        "currency": "USD",
+        "frequency": "monthly",
+        "channels": [
+          "ghost-membership",
+          "magic-campaign-membership",
+          "youtube-supporter"
+        ]
+      },
+      {
+        "guid": "super-fan",
+        "status": "active",
+        "name": "Super Fan",
+        "description": "Be a top supporter of our privacy and advocacy work",
+        "amount": 100,
+        "currency": "USD",
+        "frequency": "monthly",
+        "channels": [
+          "ghost-membership"
+        ]
+      },
+      {
+        "guid": "organizational-members",
+        "status": "active",
+        "name": "Organizations",
+        "description": "Organizational memberships are open to any company, private foundation, or organization",
+        "amount": 5000,
+        "currency": "USD",
+        "frequency": "yearly",
+        "channels": [
+          "ghost-membership",
+          "magic-campaign-membership",
+          "magic-manual-bank"
+        ]
+      },
+      {
+        "guid": "donor",
+        "status": "active",
+        "name": "General Donations",
+        "description": "Support our work with a one-time or recurring donation",
+        "amount": 0,
+        "currency": "USD",
+        "frequency": "one-time",
+        "channels": [
+          "magic-campaign-onetime",
+          "magic-manual-bank",
+          "ghost-onetime",
+          "github-sponsors",
+          "magic-campaign-membership"
+        ]
+      }
+    ],
+    "history": []
+  }
+}
