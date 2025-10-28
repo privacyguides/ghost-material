@@ -38,6 +38,18 @@
   "funding": {
     "channels": [
       {
+        "guid": "ghost-membership",
+        "type": "payment-provider",
+        "address": "https://www.privacyguides.org/en/about/donate/#/portal/signup",
+        "description": "Become a member of our newsletter and gain exclusive benefits"
+      },
+      {
+        "guid": "magic-campaign-membership",
+        "type": "payment-provider",
+        "address": "https://donate.magicgrants.org/privacyguides/membership",
+        "description": "Become a member with card or cryptocurrency via our fiscal host, Magic Grants 501(c)(3)"
+      },
+      {
         "guid": "magic-campaign-onetime",
         "type": "payment-provider",
         "address": "https://donate.magicgrants.org/privacyguides/donate/privacyguides",
@@ -55,18 +67,6 @@
         "description": "Support the project on GitHub"
       },
       {
-        "guid": "ghost-membership",
-        "type": "payment-provider",
-        "address": "https://www.privacyguides.org/en/about/donate/#/portal/signup",
-        "description": "Become a member of our newsletter and gain exclusive benefits"
-      },
-      {
-        "guid": "magic-campaign-membership",
-        "type": "payment-provider",
-        "address": "https://donate.magicgrants.org/privacyguides/membership",
-        "description": "Become a member with card or cryptocurrency via our fiscal host, Magic Grants 501(c)(3)"
-      },
-      {
         "guid": "youtube-supporter",
         "type": "payment-provider",
         "address": "https://www.youtube.com/channel/UC8q5BGkSzK6Kafk_6gKV8HA/join",
@@ -81,6 +81,22 @@
     ],
     "plans": [
       {
+        "guid": "donor",
+        "status": "active",
+        "name": "General Donations",
+        "description": "Support our work with a one-time or recurring donation",
+        "amount": 0,
+        "currency": "USD",
+        "frequency": "one-time",
+        "channels": [
+          "magic-campaign-onetime",
+          "magic-manual-bank",
+          "ghost-onetime",
+          "github-sponsors",
+          "magic-campaign-membership"
+        ]
+      },
+      {
         "guid": "member",
         "status": "active",
         "name": "Membership",
@@ -91,20 +107,6 @@
         "channels": [
           "ghost-membership",
           "magic-campaign-membership"
-        ]
-      },
-      {
-        "guid": "video-early-access",
-        "status": "active",
-        "name": "Video Early Access",
-        "description": "Gain early access to our latest videos by becoming a member or supporting us on YouTube.",
-        "amount": 2.99,
-        "currency": "USD",
-        "frequency": "monthly",
-        "channels": [
-          "ghost-membership",
-          "magic-campaign-membership",
-          "youtube-supporter"
         ]
       },
       {
@@ -134,19 +136,17 @@
         ]
       },
       {
-        "guid": "donor",
+        "guid": "video-early-access",
         "status": "active",
-        "name": "General Donations",
-        "description": "Support our work with a one-time or recurring donation",
-        "amount": 0,
+        "name": "Video Early Access",
+        "description": "Gain early access to our latest videos by becoming a member or supporting us on YouTube.",
+        "amount": 2.99,
         "currency": "USD",
-        "frequency": "one-time",
+        "frequency": "monthly",
         "channels": [
-          "magic-campaign-onetime",
-          "magic-manual-bank",
-          "ghost-onetime",
-          "github-sponsors",
-          "magic-campaign-membership"
+          "ghost-membership",
+          "magic-campaign-membership",
+          "youtube-supporter"
         ]
       }
     ],
