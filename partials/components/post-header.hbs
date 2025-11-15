@@ -1,12 +1,8 @@
 <header class="md-post__header">
   <nav class="md-tags">
-    {{#has tag="count:>1"}}
-      {{#foreach tags}}
-        {{#unless @first}}
-          <a href="{{url}}" class="md-tag">{{name}}</a>
-        {{/unless}}
-      {{/foreach}}
-    {{/has}}
+    {{#foreach tags}}
+      <a href="{{url}}" class="md-tag">{{name}}</a>
+    {{/foreach}}
   </nav>
   <h1 class="md-post__title">{{title}}</h1>
   {{#if feature_image}}
