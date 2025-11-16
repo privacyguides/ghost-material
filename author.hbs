@@ -50,12 +50,12 @@
     {{#author}}
       <header class="md-typeset">
         <h1 class="gh-pagehead-title">{{#if name}}{{name}}{{else}}{{slug}}{{/if}}</h1>
-        {{#if profile_image}}
-          <p>
-            <img align="right" alt="Profile picture" src="{{profile_image}}">
-          </p>
-        {{/if}}
         {{#if bio}}
+          {{#if profile_image}}
+            <p>
+              <img align="right" alt="Profile picture" src="{{profile_image}}">
+            </p>
+          {{/if}}
           <p>{{bio}}</p>
         {{/if}}
         <p>
