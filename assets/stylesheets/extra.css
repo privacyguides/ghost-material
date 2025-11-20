@@ -908,3 +908,11 @@ path[d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-
 body.author-template article {
     clear: both;
 }
+
+/* Custom heading fixes */
+.mdx-parallax__group .mdx-spotlight .md-typeset h2 {
+    font-size: 2em;
+}
+.mdx-parallax__group.mdx-why-care .md-typeset h3 {
+    margin-top: 0;
+}
