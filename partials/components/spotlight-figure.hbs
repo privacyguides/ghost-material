@@ -49,13 +49,14 @@
           </li>
           <li class="md-meta__item">
             <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" class="md-meta__link">
-              {{#if action}}{{action}}
+              {{#if action}}
+                {{action}}
               {{else}}
-                {{#match primary_tag = "videos"}}
+                {{#has tag="videos"}}
                   Watch now →
                 {{else}}
                   Continue reading →
-                {{/match}}
+                {{/has}}
               {{/if}}
             </a>
           </li>
