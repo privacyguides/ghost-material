@@ -49,9 +49,6 @@
     .js .md-content header[hidden]{
         opacity:0
     }
-    .pg-negate-padding{
-        margin: -3em auto;
-    }
   </style>
 {{/contentFor}}
 
@@ -93,9 +90,9 @@
 <section class="pg-home-content">
 
   <section class="mdx-parallax__group mdx-why-care">
-    <div class="md-content md-grid pg-negate-padding" data-md-component="content">
-      <div class="md-content__inner">
-        <div class="mdx-expect">
+    <div class="md-content md-grid" data-md-component="content">
+      <div class="md-content__inner" style="padding-bottom: 1em;">
+        <div class="mdx-expect" style="margin:0">
           <ul class="mdx-expect__list">
             {{#get "posts" include="tags,authors" filter="primary_tag:news" limit="2"}}
               {{#foreach posts}}
