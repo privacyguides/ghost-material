@@ -49,8 +49,8 @@
     .js .md-content header[hidden]{
         opacity:0
     }
-    .pg-padding-none{
-        padding: 0 !important;
+    .pg-negate-padding{
+        margin: -3em auto;
     }
   </style>
 {{/contentFor}}
@@ -93,8 +93,8 @@
 <section class="pg-home-content">
 
   <section class="mdx-parallax__group mdx-why-care">
-    <div class="md-content md-grid" data-md-component="content">
-      <div class="md-content__inner pg-padding-none">
+    <div class="md-content md-grid pg-negate-padding" data-md-component="content">
+      <div class="md-content__inner">
         <div class="mdx-expect">
           <ul class="mdx-expect__list">
             {{#get "posts" include="tags,authors" filter="primary_tag:news" limit="2"}}
@@ -106,6 +106,9 @@
                   <div class="mdx-expect__description">
                     <h3><a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}">{{#if custom_title}}{{custom_title}}{{else}}{{title}}{{/if}}</a></h3>
                     <p>
+                      <time datetime="{{date format="YYYY-MM-DD"}}">
+                        {{date format="MMM DD"}}
+                      </time> —
                       {{#if custom_excerpt}}
                         {{custom_excerpt}}
                       {{else}}
