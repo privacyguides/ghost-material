@@ -1,6 +1,11 @@
 <section class="mdx-parallax__group mdx-why-care" data-md-color-scheme="slate" data-md-color-primary="indigo">
   <div class="md-content md-grid" data-md-component="content">
     <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1>
+          Latest Privacy & Security Headlines
+        </h1>
+      </header>
       <div class="mdx-expect">
         <ul class="mdx-expect__list">
           {{#get "tags" filter="slug:news+visibility:public"}}
@@ -9,7 +14,7 @@
                 {{#foreach posts}}
                   <li class="mdx-expect__item md-typeset">
                     <div class="mdx-expect__icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h440l200 200v440q0 33-23.5 56.5T760-120H200Zm0-80h560v-400H600v-160H200v560Zm80-80h400v-80H280v80Zm0-320h200v-80H280v80Zm0 160h400v-80H280v80Zm-80-320v160-160 560-560Z"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h440l200 200v440q0 33-23.5 56.5T760-120H200Zm0-80h560v-400H600v-160H200v560Zm80-80h400v-80H280v80Zm0-320h200v-80H280v80Zm0 160h400v-80H280v80Zm-80-320v160-160 560-560Z"/></svg>
                     </div>
                     <div class="mdx-expect__description">
                       <h2><a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}">{{#if custom_title}}{{custom_title}}{{else}}{{title}}{{/if}}</a></h2>

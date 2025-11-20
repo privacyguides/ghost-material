@@ -1,0 +1,13 @@
+<section class="mdx-parallax__group">
+  <div class="md-content md-grid" data-md-component="content">
+    <div class="md-content__inner">
+      <div class="mdx-spotlight">
+        {{#get "posts" include="tags,authors" filter="primary_tag:[articles,videos]+visibility:public" limit="2"}}
+          {{#foreach posts}}
+            {{> "components/spotlight-figure"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+  </div>
+</section>

@@ -48,13 +48,19 @@
             {{/has}}
           </li>
           <li class="md-meta__item">
-            <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" class="md-meta__link">{{#if action}}{{action}}{{else}}Watch now →{{/if}}</a>
+            <a href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" class="md-meta__link">
+              {{#if action}}{{action}}
+              {{else}}
+                {{#match primary_tag = "videos"}}
+                  Watch now →
+                {{else}}
+                  Continue reading →
+                {{/match}}
+              {{/if}}
+            </a>
           </li>
         </ul>
       </div>
     </header>
-
-
-    
   </figcaption>
 </figure>

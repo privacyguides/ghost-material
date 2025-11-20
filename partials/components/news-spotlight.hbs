@@ -4,7 +4,7 @@
       <div class="mdx-spotlight">
         {{#get "tags" filter="slug:news+visibility:public"}}
           {{#foreach tags}}
-            {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="3"}}
+            {{#get "posts" include="tags,authors" filter="tag:{{slug}}"}}
               {{#foreach posts}}
                 {{> "components/spotlight-figure"
                     action="Continue reading →"
