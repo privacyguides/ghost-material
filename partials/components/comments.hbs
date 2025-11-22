@@ -8,9 +8,7 @@
       <div class="md-grid pg-discourse-comments">
         <h2>Community Discussion</h2>
         <div id='discourse-comments'></div>
-        {{#get "authors" filter="slug:{{primary_author.slug}}"}}
-        <meta name='discourse-username' content='{{slug}}'>
-        {{/get}}
+        <meta name='discourse-username' content='{{primary_author.slug}}'>
       </div>
 
       <script type="text/javascript">
