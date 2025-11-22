@@ -2,6 +2,12 @@
 
 {{#contentFor "extraHead"}}
 <meta property="fediverse:creator" content="@privacyguides@neat.computer">
+<style>
+  .md-post__comments {
+      background-color:var(--md-default-bg-color);
+      color:var(--md-typeset-color);
+  }
+</style>
 {{/contentFor}}
 
 {{#contentFor "navPrimaryHome"}}
@@ -25,6 +31,10 @@
 </li>
 {{/contentFor}}
 
+{{#contentFor "afterContent"}}
+{{> "components/comments"}}
+{{/contentFor}}
+
 {{#post}}
   {{> "components/post-sidebar"}}
 
@@ -34,7 +44,6 @@
       <section class="md-post__content gh-content gh-canvas">
         {{content}}
       </section>
-      {{> "components/comments"}}
     </article>
   </div>
 {{/post}}
