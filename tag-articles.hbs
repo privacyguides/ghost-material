@@ -52,6 +52,14 @@
   <div class="md-content__inner">
 
     <div class="md-typeset">
+
+      {{#is "page"}}
+        {{#page}}
+          <h1>{{title}}</h1>
+          {{content}}
+        {{/page}}
+      {{/is}}
+
       <div class="grid">
 
         {{^is "paged"}}
