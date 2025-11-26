@@ -69,6 +69,76 @@
       <section class="md-post__content gh-content gh-canvas">
         {{content}}
       </section>
+
+      <aside>
+
+        <section>
+          <h2 id="show-hosts">Show Hosts</h2>
+          {{#foreach authors}}
+            <section>
+              <div class="pg-author-card kg-card kg-cta-card kg-cta-bg-white kg-cta-minimal kg-cta-has-img" data-layout="minimal">
+
+                <div class="kg-cta-sponsor-label-wrapper">
+                  <div class="kg-cta-sponsor-label">
+                    <a href="{{url}}" style="white-space: pre-wrap;">{{name}}</a>
+                  </div>
+                </div>
+                  
+                <div class="kg-cta-content">
+                  <div class="kg-cta-image-container">
+                    <a href="{{url}}"><img src="{{profile_image}}" alt="{{name}}" data-image-dimensions="288x288"></a>
+                  </div>
+
+                  <div class="kg-cta-content-inner">
+                    <div class="kg-cta-text">
+                      <p dir="ltr"><span style="white-space: pre-wrap;">{{bio}}</span></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+          {{/foreach}}
+        </section>
+
+        {{#has tag="#writer-kevpham"}}
+          <section>
+            <h2 id="newsletter-writer">Research &amp; Writing</h2>
+            
+            {{#has tag="#writer-kevpham"}}
+              {{#get "authors" filter="slug:kevpham"}}
+                {{#foreach authors}}
+                  <section>
+                    <div class="pg-author-card kg-card kg-cta-card kg-cta-bg-white kg-cta-minimal kg-cta-has-img" data-layout="minimal">
+
+                      <div class="kg-cta-sponsor-label-wrapper">
+                        <div class="kg-cta-sponsor-label">
+                          <a href="{{url}}" style="white-space: pre-wrap;">{{name}}</a>
+                        </div>
+                      </div>
+                        
+                      <div class="kg-cta-content">
+                        <div class="kg-cta-image-container">
+                          <a href="{{url}}"><img src="{{profile_image}}" alt="{{name}}" data-image-dimensions="288x288"></a>
+                        </div>
+
+                        <div class="kg-cta-content-inner">
+                          <div class="kg-cta-text">
+                            <p dir="ltr"><span style="white-space: pre-wrap;">{{bio}}</span></p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </section>
+                {{/foreach}}
+              {{/get}}
+            {{/has}}
+
+          </section>
+        {{/has}}
+
+      </aside>
     </article>
   </div>
 {{/post}}

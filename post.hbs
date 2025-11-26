@@ -48,39 +48,36 @@
       {{> "components/post-header"}}
       <section class="md-post__content gh-content gh-canvas">
         {{content}}
+      </section>
 
-        {{#foreach authors}}
-        <div class="pg-author-card kg-card kg-cta-card kg-cta-bg-white kg-cta-minimal kg-cta-has-img" data-layout="minimal">
+      {{#foreach authors}}
+        <aside>
+          <div class="pg-author-card kg-card kg-cta-card kg-cta-bg-white kg-cta-minimal kg-cta-has-img" data-layout="minimal">
 
-          <div class="kg-cta-sponsor-label-wrapper">
-            <div class="kg-cta-sponsor-label">
-              <span style="white-space: pre-wrap;">{{name}}</span>
+            <div class="kg-cta-sponsor-label-wrapper">
+              <div class="kg-cta-sponsor-label">
+                <span style="white-space: pre-wrap;">{{name}}</span>
+              </div>
             </div>
-          </div>
-            
-          <div class="kg-cta-content">
               
-            <div class="kg-cta-image-container">
-              <a href="{{url}}"><img src="{{profile_image}}" alt="{{name}}" data-image-dimensions="288x288"></a>
-            </div>
-
-            <div class="kg-cta-content-inner">
-
-              <div class="kg-cta-text">
-                <p dir="ltr"><span style="white-space: pre-wrap;">{{bio}}</span></p>
+            <div class="kg-cta-content">
+              <div class="kg-cta-image-container">
+                <a href="{{url}}"><img src="{{profile_image}}" alt="{{name}}" data-image-dimensions="288x288"></a>
               </div>
 
-              <a href="{{url}}" class="kg-cta-button " style="background-color: #F0F0F0; color: #000000;">
-                More from this author
-              </a>
-                
+              <div class="kg-cta-content-inner">
+                <div class="kg-cta-text">
+                  <p dir="ltr"><span style="white-space: pre-wrap;">{{bio}}</span></p>
+                </div>
+                <a href="{{url}}" class="kg-cta-button " style="background-color: #F0F0F0; color: #000000;">
+                  More from this author
+                </a>
+              </div>
             </div>
-              
-          </div>
-        </div>
-        {{/foreach}}
 
-      </section>
+          </div>
+        </aside>
+      {{/foreach}}
     </article>
   </div>
 {{/post}}

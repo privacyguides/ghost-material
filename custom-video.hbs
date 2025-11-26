@@ -156,6 +156,54 @@
       <section class="md-post__content gh-content gh-canvas">
         {{content}}
       </section>
+      <div class="grid">
+        
+        <aside>
+          <div class="kg-card kg-cta-card kg-cta-bg-grey kg-cta-minimal" data-layout="minimal">
+            <div class="kg-cta-content">
+              <div class="kg-cta-content-inner">
+                <div class="kg-cta-text">
+                  <p><span style="white-space: pre-wrap;">Thank you for watching. If you want to support our videos, guides, and other resources please consider becoming a Privacy Guides member.</span></p>
+                  <p><i><em class="italic" style="white-space: pre-wrap;">Privacy Guides</em></i><span style="white-space: pre-wrap;"> is 100% reader-funded. You can subscribe for free, or donate and receive early-access and exclusive content from the team.</span></p>
+                </div>
+                <a href="#/portal/signup" class="kg-cta-button" style="background-color: #000000; color: #ffffff;">
+                  Join Privacy Guides
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+        
+        {{#foreach authors}}
+          <aside>
+            <div class="pg-author-card kg-card kg-cta-card kg-cta-bg-white kg-cta-minimal kg-cta-has-img" data-layout="minimal">
+
+              <div class="kg-cta-sponsor-label-wrapper">
+                <div class="kg-cta-sponsor-label">
+                  <span style="white-space: pre-wrap;">{{name}}</span>
+                </div>
+              </div>
+                
+              <div class="kg-cta-content">
+                <div class="kg-cta-image-container">
+                  <a href="{{url}}"><img src="{{profile_image}}" alt="{{name}}" data-image-dimensions="288x288"></a>
+                </div>
+
+                <div class="kg-cta-content-inner">
+                  <div class="kg-cta-text">
+                    <p dir="ltr"><span style="white-space: pre-wrap;">{{bio}}</span></p>
+                  </div>
+                  <a href="{{url}}" class="kg-cta-button " style="background-color: #F0F0F0; color: #000000;">
+                    More from this creator
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </aside>
+        {{/foreach}}
+
+      </div>
     </article>
   </div>
 {{/post}}
